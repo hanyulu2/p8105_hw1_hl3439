@@ -34,5 +34,19 @@ mean(pull(prob1_df, char_vec))
 mean(pull(prob1_df, factor_vec))
 ```
 
+I can take the mean of numbers and logical but not character or factor.
+
+```{r eval=FALSE}
+as.numeric(pull(prob1_df, samp))
+as.numeric(pull(prob1_df, samp_gt_0))
+as.numeric(pull(prob1_df, char_vec))
+as.numeric(pull(prob1_df, factor_vec))
+```
+
+I have numerical outputs for numbers, logical, and factor variables, but not for characters.
+Mean does not exist for any variables not converted to numerical values.
+
+
+
 ## Problem 2
 
