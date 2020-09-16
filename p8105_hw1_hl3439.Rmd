@@ -46,7 +46,13 @@ as.numeric(pull(prob1_df, factor_vec))
 I have numerical outputs for numbers, logical, and factor variables, but not for characters.
 Mean does not exist for any variables not converted to numerical values.
 
+```{r}
+as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
+as.factor(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
+as.numeric(as.factor(pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
+```
 
+After factors are converted to numbers, they can do arithmetic operations including multiplication.  However, factors are not eligible for multiplication.
 
 ## Problem 2
 
