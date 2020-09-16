@@ -16,7 +16,7 @@ library(tidyverse)
 Create a data frame with the specified elements.
 
 ```{r}
-probl_df=
+prob1_df=
   tibble(
     samp = rnorm(10),
     samp_gt_0 = samp > 0,
@@ -25,7 +25,14 @@ probl_df=
   )
 ```
 
+Take the mean of each variable in my data frame.
 
+```{r}
+mean(pull(prob1_df, samp))
+mean(pull(prob1_df, samp_gt_0))
+mean(pull(prob1_df, char_vec))
+mean(pull(prob1_df, factor_vec))
+```
 
 ## Problem 2
 
