@@ -8,6 +8,7 @@ This is my solution to HW1.
 
 ```{r}
 library(tidyverse)
+library(ggplot2)
 ```
 
 
@@ -60,8 +61,6 @@ First, load the penguins dataset.
 
 ```{r}
 data("penguins", package = "palmerpenguins")
-??penguin
-summary(penguins)
 ```
 
 * There are several variables in the penguins dataset that includes `r ls(penguins)`.
@@ -70,3 +69,11 @@ Among those variables, bill_length_mm has range ( `r range(penguins$bill_length_
 * The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns.
 
 * The mean flipper length is `r mean(penguins$flipper_length_mm, na.rm = TRUE)`.
+
+* Make a scatterplot of flipper length (y) vs bill length (x).
+
+```{r warning = FALSE}
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm, color = species)) + geom_point()
+ggsave("first_scatterplot_hl3439.png")
+```
+
