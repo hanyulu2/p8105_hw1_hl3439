@@ -70,7 +70,7 @@ Among those variables, bill_length_mm has range ( `r range(penguins$bill_length_
 
 * The mean flipper length is `r mean(penguins$flipper_length_mm, na.rm = TRUE)`.
 
-* Make a scatterplot of flipper length (y) vs bill length (x).
+* Make a scatterplot of flipper length (y) vs bill length (x) with points colored in accordance with different species.
 
 ```{r warning = FALSE}
 ggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm, color = species)) + geom_point()
